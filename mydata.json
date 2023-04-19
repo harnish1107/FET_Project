@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "name": "Harnish",
+      "email": "xyz@gmail.com",
+      "mobile": 1234567890,
+      "city": "Xyzq",
+      "dob": "2002-07-11"
+    },
+    {
+      "id": 3,
+      "name": "Harnish",
+      "email": "xyz@gmail.com",
+      "mobile": 1234567890,
+      "city": "Dehgam",
+      "dob": "2002-09-28"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

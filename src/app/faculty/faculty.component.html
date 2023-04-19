@@ -1,0 +1,43 @@
+<div>
+    <h2 style="margin-left: 580px;">Login</h2>
+    <label for="username">Username</label>
+    <input type="text" id="username" [(ngModel)]="username" autocomplete="off"><br><br>
+    <label for="password">Password</label>
+    <input type="password" id="password" [(ngModel)]="password"><br><br>
+    <button (click)="login()">Login</button><br><br>
+    <p>{{message}}</p>
+    <div *ngIf="data">
+      <nav class="navbar navbar-light bg-dark">
+        <div class="container-fluid">
+            <h2 class="text-light primary py-3" data-toggle="modal" data-target="#exampleModal">Student Attendance
+                System
+            </h2>
+            <div class="d-flex">
+                    <button class="btn btn-warning" (click)="logout()">Logout</button>
+            </div>
+        </div>
+    </nav>
+        <table class="table mt-4">
+          <thead>
+            <tr>
+              <th scope="col">Roll No</th>
+              <th scope="col">Name</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of data">
+              <td>{{item.id}}</td>
+              <td>{{item.name}}</td>
+              <td>
+                <input type="radio" name="attendance-{{item.id}}" id="present-{{item.id}}" class="attendance" value="Present">
+                <label for="present-{{item.id}}">Present</label>&nbsp;
+                <input type="radio" name="attendance-{{item.id}}" id="absent-{{item.id}}" class="attendance" value="Absent">
+                <label for="absent-{{item.id}}">Absent</label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="btn btn-success" (click)="submitAttendance()" data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>
+      </div>           
+</div>

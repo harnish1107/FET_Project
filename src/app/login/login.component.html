@@ -1,0 +1,13 @@
+<div>
+    <h2 style="margin-left: 580px;">Login</h2>
+    <label for="username">Username:</label>
+    <input type="text" id="username" [(ngModel)]="username" autocomplete="off">
+    <br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" [(ngModel)]="password">
+    <br><br>
+    <button (click)="login()">Login</button>
+    <br><br>
+    <p>{{ message }}</p>
+  </div>
+  
